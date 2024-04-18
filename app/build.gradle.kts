@@ -7,6 +7,10 @@ android {
     namespace = "com.sparta.applemarket"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.sparta.applemarket"
         minSdk = 24
