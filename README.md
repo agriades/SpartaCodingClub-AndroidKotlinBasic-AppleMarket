@@ -2,42 +2,31 @@
 ## Adapter
 ---
 ### 필수과제 :  반드시 구현해야 할 기능
-## 1️⃣ 메인 페이지 만들기
-
-### RecyclerView : ⏳ RecyclerViewer를 이용해 리스트 화면을 만들어주세요.
-- ✅ (뷰 바인딩으로 액티비티에 레이아웃 연결하기)
-- ✅ 데이터 원본 준비하기: ForSale data class로 형식을 만들고, CurrentForSale class에 더미 데이터를 추가해 두었다.
-- ✅ Adapter에 데이터 원본을 하나의 MutableList로 집어넣기.
-- ✅ Adapter 안에 ViewHolder를 inner class로 만들기. 이 때, binding은 item의 xml layout과 연결할 것.
-- ✅ 내용이 빈 Adapter 안에 Implement members (빨간 줄에 ctrl + 엔터 하면 나옵니다.)
-![스크린샷 2024-04-19 061751](https://github.com/agriades/SpartaCodingClub-AndroidKotlinBasic-AppleMarket/assets/75528131/63384310-1996-4643-8fc9-2f6fb321ddbe)
-
 - 추가로 하면 좋을 것: forSale 1 ~ 10 데이터 구조 재활용 가능하게 만들기 (하드코딩 > 반복문, 배열)
----
-#### companion object로 전역변수 선언
-
-![image](https://github.com/agriades/SpartaCodingClub-AndroidKotlinBasic-AppleMarket/assets/75528131/0181764e-24ab-4148-b0a0-1943a111b97f)
-
-배운 점: companion의 개념을 잘 몰랐는데, 아예 전역 변수로 쓰려면 companion object로 선언되어야 하나 보다.
-CurrentForSale class 안에 companion object 구문을 만들어, forSale1 ~ 10 더미데이터를 안에 추가했다.
+## 1️⃣ 메인 페이지 만들기
 
 ### 상품 선택: ⏳ Parcelize와 Intent를 통해 상세 페이지로 넘어가기
 - [ ]  상품 선택시 아래 상품 상세 페이지로 이동합니다.
 - [ ]  상품 상세페이지 이동시 intent로 객체를 전달합니다. (Parcelize 사용)
 
-### 동적이지만 사소한 것들: ⏳ 다이얼로그, 알림, 콤마 처리
+### 동적이지만 디테일한 것들: ⏳ 다이얼로그, 알림, 콤마 처리
 - [ ]  뒤로가기(BACK)버튼 클릭시 종료하시겠습니까? [확인][취소] 다이얼로그를 띄워주세요. (예시 비디오 참고)
 - [ ]  상단 종모양 아이콘을 누르면 Notification을 생성해 주세요. (예시 비디오 참고)
-- [ ]  상품 가격은 1000단위로 콤마(,) 처리해주세요.
-```
-//ForSaleAdapter.kt
-var format: DecimalFormat = DecimalFormat("###,###,##0")
-...override fun onBindViewHolder(...) {
-format.format(iData[position].iBalance)
-}
-```
 
 (완료)
+### RecyclerView : ⏳ RecyclerViewer를 이용해 리스트 화면을 만들어주세요.
+- ✅ (뷰 바인딩으로 액티비티에 레이아웃 연결하기)
+- ✅ 데이터 원본 준비하기: ForSale data class로 형식을 만들고, CurrentForSale class에 더미 데이터를 추가해 두었다.
+- ✅ Adapter에 데이터 원본을 하나의 MutableList로 집어넣기.
+- ✅ Adapter 안에 ViewHolder를 inner class로 만들기. 이 때, binding은 item의 xml layout과 연결할 것.
+- ✅ 내용이 빈 Adapter 안에 Implement members (빨간 줄에 ctrl + 엔터 하면 나옵니다.) 한 뒤 필요한 내용을 채울 것.
+![스크린샷 2024-04-19 061751](https://github.com/agriades/SpartaCodingClub-AndroidKotlinBasic-AppleMarket/assets/75528131/63384310-1996-4643-8fc9-2f6fb321ddbe)
+```
+onCreateViewHolder: 뷰홀더 만들기, 뷰'니까 홀드할 레이아웃을 바인딩으로 연결.
+getItemCount: item list size 반환
+onBindViewHolder: 각각의 아이템 정보를 불러오고, 클릭 처리도 여기서 함.
+```
+
 ### XML 레이아웃: ⏳ 디자인 및 화면 구성을 최대한 동일하게 해주세요. (사이즈 및 여백도 최대한 맞춰주세요.) ✨
 - ✅  상품 데이터는 아래 dummy data 를 사용합니다. (더미 데이터는 자유롭게 추가 및 수정 가능)
 - ✅  상단 툴바를 제거하고 풀스크린 화면으로 세팅해주세요.  (상태바(시간/배터리 표시하는 최상단바)는 남기고) ❓ 딱히 바꾼 게 없다.
@@ -50,6 +39,14 @@ format.format(iData[position].iBalance)
         android:ellipsize="end"
 ```
 
+- ✅  상품 가격은 1000단위로 콤마(,) 처리해주세요. (살짝 동적이긴 함. 어댑터에 작성!)
+```
+//ForSaleAdapter.kt
+var format: DecimalFormat = DecimalFormat("###,###,##0")
+...override fun onBindViewHolder(...) {
+format.format(iData[position].iBalance)
+}
+```
 
 💡 2️⃣ **상품 상세 페이지 만들기**
 
