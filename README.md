@@ -1,25 +1,29 @@
  **필수과제 :  반드시 구현해야 할 기능이에요.**
-
 💡 **1️⃣ 메인 페이지 만들기**
 
 ![image](https://github.com/agriades/SpartaCodingClub-AndroidKotlinBasic-AppleMarket/assets/75528131/94d5e53c-aa90-411a-a076-35de7c73aa61)
 
-- [ ]  디자인 및 화면 구성을 최대한 동일하게 해주세요. (사이즈 및 여백도 최대한 맞춰주세요.) ✨
-- ✅  상품 데이터는 아래 dummy data 를 사용합니다. (더미 데이터는 자유롭게 추가 및 수정 가능)
-- ✅  더미 데이터 : [이미지 링크](https://drive.google.com/file/d/1P5AnZI1N2AB7yNqwkgF-KxlUdDjkmrBu/view?usp=sharing),  [상품 리스트 링크](https://docs.google.com/spreadsheets/d/1m9VDxJ3Q7dLEjefnWBq4fCghtWIUFnpM/edit?usp=sharing&ouid=116688204055896164464&rtpof=true&sd=true)  (←링크 권한 없으면 [여기](https://drive.google.com/drive/folders/1ZYQIxmP8JAXpcxvQB3QekYZLYQiNlZqK?usp=sharing) 클릭)
+**XML 레이아웃**
+[ ]  디자인 및 화면 구성을 최대한 동일하게 해주세요. (사이즈 및 여백도 최대한 맞춰주세요.) ✨
+    ✅  상품 데이터는 아래 dummy data 를 사용합니다. (더미 데이터는 자유롭게 추가 및 수정 가능)
+    ✅  더미 데이터 : [이미지 링크](https://drive.google.com/file/d/1P5AnZI1N2AB7yNqwkgF-KxlUdDjkmrBu/view?usp=sharing),  [상품 리스트 링크] https://docs.google.com/spreadsheets/d/1m9VDxJ3Q7dLEjefnWBq4fCghtWIUFnpM/edit?usp=sharing&ouid=116688204055896164464&rtpof=true&sd=true)  (←링크 권한 없으면 [여기](https://drive.google.com/drive/folders/1ZYQIxmP8JAXpcxvQB3QekYZLYQiNlZqK?usp=sharing) 클릭)
+    
 ⏳  RecyclerViewer를 이용해 리스트 화면을 만들어주세요.
     ✅ (바인딩)
     ✅ 데이터 원본 준비하기: ForSale data class로 형식을 만들고, CurrentForSale class에 더미 데이터를 추가해 두었다.
-    [ ] 데이터 구조 재활용 가능하게 만들기 (하드코딩 > 반복문, 배열)
-  ```
-    val dataList = mutableListOf<ForSale>()
-    dataList.add(forSale1)
-  ```
-<center>![image](https://github.com/agriades/SpartaCodingClub-AndroidKotlinBasic-AppleMarket/assets/75528131/0181764e-24ab-4148-b0a0-1943a111b97f)</center>
+    ✅ Adapter에 데이터 원본을 하나의 MutableList로 집어넣기.  
+      ```
+        val dataList = mutableListOf<ForSale>()
+        dataList.add(forSale1)
+        ...
+        dataList.add(forSale10)
+      ```
+![image](https://github.com/agriades/SpartaCodingClub-AndroidKotlinBasic-AppleMarket/assets/75528131/0181764e-24ab-4148-b0a0-1943a111b97f)
 
-companion의 개념을 잘 몰랐는데, 아예 전역 변수로 쓰려면 companion object로 선언되어야 하나 보다.
+배운 점: companion의 개념을 잘 몰랐는데, 아예 전역 변수로 쓰려면 companion object로 선언되어야 하나 보다.
 CurrentForSale class 안에 companion object 구문을 만들어, forSale1 ~ 10 더미데이터를 안에 추가했다.
 
+[ ] 데이터 구조 재활용 가능하게 만들기 (하드코딩 > 반복문, 배열)
     [ ] Adapter에 데이터 원본을 하나의 MutableList로 집어넣기.
     [ ] ViewHolder
 
