@@ -1,3 +1,6 @@
+# RecyclerView = Adapter + ViewHolder
+## Adapter
+---
 ### 필수과제 :  반드시 구현해야 할 기능
 ## 1️⃣ 메인 페이지 만들기
 
