@@ -16,6 +16,7 @@ class ForSaleAdapter(val iData: MutableList<ForSale>): RecyclerView.Adapter<ForS
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) { //각각의 아이템에서
+        holder.img.setImageResource(iData[position].img)
         holder.title.text = iData[position].title
         holder.address.text = iData[position].address
         holder.price.text = iData[position].price.toString() + "원" //가격
