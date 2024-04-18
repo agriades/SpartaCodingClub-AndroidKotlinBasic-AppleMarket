@@ -2,7 +2,7 @@ package com.sparta.applemarket
 
 data class ForSale(
     val num: Int,
-    val img: String,
+    val img: Int, // 이미지 주소는 int
     val title: String,
     val desc: String,
     val seller: String,
