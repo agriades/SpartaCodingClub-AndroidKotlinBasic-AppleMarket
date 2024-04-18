@@ -1,8 +1,9 @@
 package com.sparta.applemarket
 
+
 class CurrentForSale {
     companion object {
-        val forSale1 = ForSale(1, "sample1", "@strings/fs_title_1", "@strings/fs_desc_1",
+        val forSale1 = ForSale(1, "sample1", resources.getString(R.string.fs_title_1), "@strings/fs_desc_1",
             "@strings/fs_seller_1", 1000, "@strings/fs_address_1", 13, 25)
         val forSale2 = ForSale(2, "sample2", "@strings/fs_title_2", "@strings/fs_desc_2",
             "@strings/fs_seller_2", 20000, "@strings/fs_address_2", 8, 28)
