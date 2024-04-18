@@ -16,7 +16,11 @@ class ForSaleAdapter(val iData: MutableList<ForSale>): RecyclerView.Adapter<ForS
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) { //각각의 아이템에서
-        TODO("Not yet implemented")
+        holder.title.text = iData[position].title
+        holder.address.text = iData[position].address
+        holder.price.text = iData[position].price.toString() + "원" //가격
+        holder.likes.text = iData[position].likes.toString()
+        holder.chat.text = iData[position].chat.toString()
     }
 
     inner class Holder(private val itemBinding: ForSaleItemBinding): RecyclerView.ViewHolder(itemBinding.root) {
