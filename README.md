@@ -15,6 +15,10 @@
     val dataList = mutableListOf<ForSale>()
     dataList.add(forSale1)
   ```
+![image](https://github.com/agriades/SpartaCodingClub-AndroidKotlinBasic-AppleMarket/assets/75528131/0181764e-24ab-4148-b0a0-1943a111b97f)
+companion의 개념을 잘 몰랐는데, 아예 전역 변수로 쓰려면 companion object로 선언되어야 하나 보다.
+CurrentForSale class 안에 companion object 구문을 만들어, forSale1 ~ 10 더미데이터를 안에 추가했다.
+
     [ ] Adapter에 데이터 원본을 하나의 MutableList로 집어넣기.
     [ ] ViewHolder
 
