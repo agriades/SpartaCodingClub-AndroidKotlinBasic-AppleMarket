@@ -37,10 +37,11 @@ CurrentForSale class 안에 companion object 구문을 만들어, forSale1 ~ 10 
 - ✅  상품 아이템들 사이에 회색 라인을 추가해서 구분해주세요.
 - ✅  상품 이미지는 모서리를 라운드 처리해주세요.
 - ✅  상품 이름은 최대 두 줄이고, 그래도 넘어가면 뒷 부분에 …으로 처리해주세요.
-'''
+  
+```
         android:maxLines="2"
         android:ellipsize="end"
-'''
+```
 
 
 💡 2️⃣ **상품 상세 페이지 만들기**
