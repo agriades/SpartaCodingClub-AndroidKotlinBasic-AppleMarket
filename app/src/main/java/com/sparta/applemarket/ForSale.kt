@@ -1,6 +1,6 @@
 package com.sparta.applemarket
 
-data class Sale(
+data class ForSale(
     val num: Int,
     val img: String,
     val title: String,
