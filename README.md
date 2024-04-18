@@ -1,6 +1,9 @@
  **필수과제 :  반드시 구현해야 할 기능이에요.**
 
 💡 **1️⃣ 메인 페이지 만들기**
+
+![image](https://github.com/agriades/SpartaCodingClub-AndroidKotlinBasic-AppleMarket/assets/75528131/94d5e53c-aa90-411a-a076-35de7c73aa61)
+
 - [ ]  디자인 및 화면 구성을 최대한 동일하게 해주세요. (사이즈 및 여백도 최대한 맞춰주세요.) ✨
 - [ ]  상품 데이터는 아래 dummy data 를 사용합니다. (더미 데이터는 자유롭게 추가 및 수정 가능)
 - [ ]  더미 데이터 : [이미지 링크](https://drive.google.com/file/d/1P5AnZI1N2AB7yNqwkgF-KxlUdDjkmrBu/view?usp=sharing),  [상품 리스트 링크](https://docs.google.com/spreadsheets/d/1m9VDxJ3Q7dLEjefnWBq4fCghtWIUFnpM/edit?usp=sharing&ouid=116688204055896164464&rtpof=true&sd=true)  (←링크 권한 없으면 [여기](https://drive.google.com/drive/folders/1ZYQIxmP8JAXpcxvQB3QekYZLYQiNlZqK?usp=sharing) 클릭)
@@ -15,3 +18,12 @@
 - [ ]  상품 아이템들 사이에 회색 라인을 추가해서 구분해주세요.
 - [ ]  상품 선택시 아래 상품 상세 페이지로 이동합니다.
 - [ ]  상품 상세페이지 이동시 intent로 객체를 전달합니다. (Parcelize 사용)
+
+💡 2️⃣ **상품 상세 페이지 만들기**
+
+![image](https://github.com/agriades/SpartaCodingClub-AndroidKotlinBasic-AppleMarket/assets/75528131/b5a486ef-8002-44d7-b892-97bcf24a17e9)
+
+- [ ]  디자인 및 화면 구성을 최대한 동일하게 해주세요. (사이즈 및 여백도 최대한 맞춰주세요.) ✨
+- [ ]  메인화면에서 전달받은 데이터로 판매자, 주소, 아이템, 글내용, 가격등을 화면에 표시합니다.
+- [ ]  하단 가격표시 레이아웃을 제외하고 전체화면은 스크롤이 되어야합니다. (예시 비디오 참고)
+- [ ]  상단 < 버튼을 누르면 상세 화면은 종료되고 메인화면으로 돌아갑니다.
