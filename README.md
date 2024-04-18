@@ -8,7 +8,7 @@
 - ✅ (뷰 바인딩으로 액티비티에 레이아웃 연결하기)
 - ✅ 데이터 원본 준비하기: ForSale data class로 형식을 만들고, CurrentForSale class에 더미 데이터를 추가해 두었다.
 - ✅ Adapter에 데이터 원본을 하나의 MutableList로 집어넣기.
-- [ ] ViewHolder
+- ✅ Adapter 안에 ViewHolder를 inner class로 만들기. 이 때, binding은 item의 xml layout과 연결할 것.
 - 추가로 하면 좋을 것: forSale 1 ~ 10 데이터 구조 재활용 가능하게 만들기 (하드코딩 > 반복문, 배열)
 ---
 #### companion object로 전역변수 선언
