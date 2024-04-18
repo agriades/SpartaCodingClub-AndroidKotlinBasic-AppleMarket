@@ -3,6 +3,7 @@ package com.sparta.applemarket
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.sparta.applemarket.databinding.ActivityMainBinding
+import com.sparta.applemarket.CurrentForSale
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -10,5 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val dataList = mutableListOf<ForSale>()
+        dataList.add(CurrentForSale.forSale1)
     }
 }
