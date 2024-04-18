@@ -8,14 +8,14 @@
         android:id="@+id/card_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="20dp"
+        app:cardCornerRadius="16dp"
         android:layout_margin="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <ImageView
             android:id="@+id/image"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:src="@drawable/sample1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -25,11 +25,12 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:text="@string/fs_title_1"
         android:textSize="17dp"
         android:textStyle="bold"
         android:textColor="#232323"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="3dp"
         app:layout_constraintStart_toEndOf="@+id/card_view"
         app:layout_constraintTop_toTopOf="@id/card_view"/>
     <TextView
@@ -40,7 +41,7 @@
         android:textSize="15dp"
         android:textColor="#959595"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/card_view"
+        app:layout_constraintStart_toStartOf="@id/title"
         app:layout_constraintTop_toBottomOf="@id/title"/>
     <TextView
         android:layout_width="wrap_content"
@@ -49,8 +50,9 @@
         android:textSize="20dp"
         android:textColor="#000000"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/card_view"
+        app:layout_constraintStart_toStartOf="@id/title"
         app:layout_constraintTop_toBottomOf="@id/desc"/>
+
     <TextView
         android:id="@+id/likes_count"
         android:layout_width="wrap_content"
@@ -58,18 +60,16 @@
         android:text="25"
         android:textSize="16dp"
         android:textColor="#7C7C7C"
-        android:layout_marginBottom="15dp"
-        android:layout_marginRight="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/card_view">
     <ImageView
         android:id="@+id/likes_icon"
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:src="@android:drawable/ic_menu_edit"
-        android:layout_marginBottom="15dp"
         app:layout_constraintEnd_toStartOf="@id/likes_count"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@id/likes_count"/>
     <TextView
         android:id="@+id/chat_count"
         android:layout_width="wrap_content"
@@ -77,24 +77,23 @@
         android:text="25"
         android:textSize="16dp"
         android:textColor="#7C7C7C"
-        android:layout_marginBottom="15dp"
         android:layout_marginRight="6dp"
         app:layout_constraintEnd_toStartOf="@id/likes_icon"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@id/likes_count"/>
     <ImageView
         android:id="@+id/chat_icon"
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:src="@android:drawable/ic_menu_edit"
-        android:layout_marginBottom="15dp"
         app:layout_constraintEnd_toStartOf="@id/chat_count"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@id/likes_count"/>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:src="@drawable/item_endbar"
+        android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/card_view"/>
+        app:layout_constraintTop_toBottomOf="@id/card_view"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
