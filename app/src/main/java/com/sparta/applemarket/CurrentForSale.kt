@@ -1,5 +1,7 @@
 package com.sparta.applemarket
 
+import android.content.res.Resources
+
 
 class CurrentForSale {
     companion object {
