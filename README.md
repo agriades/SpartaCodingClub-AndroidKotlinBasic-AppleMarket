@@ -9,6 +9,9 @@
 - ✅ 데이터 원본 준비하기: ForSale data class로 형식을 만들고, CurrentForSale class에 더미 데이터를 추가해 두었다.
 - ✅ Adapter에 데이터 원본을 하나의 MutableList로 집어넣기.
 - ✅ Adapter 안에 ViewHolder를 inner class로 만들기. 이 때, binding은 item의 xml layout과 연결할 것.
+- ✅ 내용이 빈 Adapter 안에 Implement members (빨간 줄에 ctrl + 엔터 하면 나옵니다.)
+![스크린샷 2024-04-19 061751](https://github.com/agriades/SpartaCodingClub-AndroidKotlinBasic-AppleMarket/assets/75528131/63384310-1996-4643-8fc9-2f6fb321ddbe)
+
 - 추가로 하면 좋을 것: forSale 1 ~ 10 데이터 구조 재활용 가능하게 만들기 (하드코딩 > 반복문, 배열)
 ---
 #### companion object로 전역변수 선언
