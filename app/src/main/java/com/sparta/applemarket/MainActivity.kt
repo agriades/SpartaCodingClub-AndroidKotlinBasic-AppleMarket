@@ -1,9 +1,9 @@
 package com.sparta.applemarket
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.sparta.applemarket.databinding.ActivityMainBinding
-import com.sparta.applemarket.CurrentForSale
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -12,7 +12,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val dataList = mutableListOf<ForSale>()
-        dataList.add(CurrentForSale.forSale1)
+        val dataList = mutableListOf<ForSale>(CurrentForSale.forSale1)
+        val adapter = ForSaleAdapter(dataList)
+        binding.recyclerView.adapter = adapter
+
     }
 }

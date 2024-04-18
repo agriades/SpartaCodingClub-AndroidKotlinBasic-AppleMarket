@@ -23,7 +23,7 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width=""
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/fs_title_1"
         android:textSize="17dp"
@@ -34,7 +34,7 @@
         app:layout_constraintStart_toEndOf="@+id/card_view"
         app:layout_constraintTop_toTopOf="@id/card_view"/>
     <TextView
-        android:id="@+id/desc"
+        android:id="@+id/address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/fs_address_1"
@@ -44,6 +44,7 @@
         app:layout_constraintStart_toStartOf="@id/title"
         app:layout_constraintTop_toBottomOf="@id/title"/>
     <TextView
+        android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1,000원"
@@ -51,7 +52,7 @@
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/title"
-        app:layout_constraintTop_toBottomOf="@id/desc"/>
+        app:layout_constraintTop_toBottomOf="@id/address"/>
 
     <TextView
         android:id="@+id/likes_count"
